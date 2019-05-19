@@ -25,3 +25,5 @@ ReactDOM.hydrate(<App />, document.getElementById('root'));
 yarn add webpack webpack-cli babel-core babel-loader babel-preset-env babel-preset-react-app nodemon webpack-node-externals npm-run-all --dev
 
 ```
+
+The StaticRouter component expects a location and a context prop. We pass the current url (Express’ req.url) to the location prop and an empty object to the context prop. The context object is useful to store information about a specific route render, and that information is then made available to the component in the form of a staticContext prop.
